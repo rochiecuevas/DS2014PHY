@@ -8,7 +8,7 @@ In that paper, R was used in data analyses. I used Ward's cluster analysis to cl
 ## Further data exploration 
 I am now exploring the dataset using different approaches. The results, of course, are quite different.
 
-There are 25 continuous variables in the dataset and these could be categorised as follows:
+There are 25 continuous variables in the dataset:
 
 <table>
     <tr>
@@ -143,4 +143,12 @@ There are 25 continuous variables in the dataset and these could be categorised 
     </tr>
 </table>
 
-First, I calculate the Pearson correlation coefficient and determine variable pairs with high coefficients (r > 0.70). From these variable pairs,
+First, I calculate the Pearson correlation coefficient and determine the variable pairs with high coefficients (r > 0.70). From these variable pairs, I picked variables to be excluded from the analysis. 
+
+Second, I conduct K-means clustering. To determine the number of clusters, I used the elbow method (calculating the sum of squared distances per cluster number), the silhouette method, and the dendogram method. These methods indicate that a five-cluster solution is the best; hence, the subsequent deep learning neural network algorithm is based on five clusters.
+
+<a href = "http://neuralnetworksanddeeplearning.com/">Neural networks</a> are programming approaches to learn from observational data by loosely imitating the way the brain's neurons connect and process information. <a href = "http://neuralnetworksanddeeplearning.com/">Deep learning</a>, on the other hand, is a set of techniques for learning within neural networks. I used these techniques to classify the samples.
+
+I divide the samples into a test and a training set. Then, the data is scaled so that all variables have values within the same scale. The input layer is composed of the 18 variables. The hidden layer has 100 units and uses ReLU as the activation function. The output layer has five units and softmax as its activation function.
+
+The deep learning algorithm's performance is evaluated using the DS2014PHY data.
