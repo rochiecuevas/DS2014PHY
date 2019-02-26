@@ -6,7 +6,7 @@ The data is publicly available and can be found in the supplementary section of 
 In that paper, R was used in data analyses. I used Ward's cluster analysis to classify the rice varieties into quality types. I then used multinomial logistic regression to create a model that can be used to differentiate the different quality types based on the non-collinear variables used to characterise the rice samples. A random forest algorithm was applied to determine the variables that were most important in classifying the rice samples.
 
 ## Further data exploration 
-I am now exploring the dataset using different approaches. The results, of course, are quite different.
+I am now exploring the dataset using different approaches implemented in Python. The results, of course, are quite different because I use deep learning in neural networks. 
 
 There are 25 continuous variables in the dataset:
 
